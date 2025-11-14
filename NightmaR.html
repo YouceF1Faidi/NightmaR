@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NightmaR</title>
+
+    <style>
+
+        /* خلفية داكنة بتدرج بنفسجي */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(160deg, #000000, #1a002b, #000000);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #ffffff;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* شريط التنقل */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+        }
+
+        nav h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #c48aff;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #e4d3ff;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #c48aff;
+        }
+
+        /* قسم الترحيب */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 5px;
+            color: #c48aff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            opacity: 0.8;
+        }
+
+        /* أزرار الأقسام */
+        .sections {
+            margin-top: 40px;
+            display: flex;
+            gap: 25px;
+        }
+
+        .sec-btn {
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            border: 2px solid #c48aff;
+            background: transparent;
+            color: #e4d3ff;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .sec-btn:hover {
+            background: #c48aff33;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <h1>NightmaR</h1>
+        <div>
+            <a href="NightmaR.html">الرئيسية</a>
+            <a href="#">Anime</a>
+            <a href="games.html">Games</a>
+            <<a href="about.html" target="_blank">حول</a>
+
+        </div>
+    </nav>
+
+    <!-- قسم الترحيب -->
+    <div class="hero">
+        <h2>مرحبا بك في NightmaR</h2>
+        <p>منصة تجمع بين عالم الأنمي وعالم الألعاب، في تصميم داكن وراقي يخلق أجواء خاصة للمحتوى الذي تحبه.</p>
+
+        <div class="sections">
+            <button class="sec-btn">Anime</button>
+            <button onclick="window.location.href='games.html'">Games</button>
+        </div>
+    </div>
+
+</body>
+</html>
